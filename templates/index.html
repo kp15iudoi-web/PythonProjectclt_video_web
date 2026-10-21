@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Giao Dịch</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Logo -->
+        <div class="logo-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+            </svg>
+        </div>
+
+        <h1 class="main-title">Hệ Thống Giao Dịch</h1>
+        <p class="subtitle">Hệ thống mô phỏng và trực quan hóa luồng dữ liệu chứng khoán</p>
+
+        <!-- Khung hiển thị GIF mô phỏng -->
+        <div class="card-box">
+            <h2 class="card-title">Phân tích giao dịch trực quan</h2>
+            <div class="video-wrapper">
+                <img src="{{ url_for('static', path='/video/clt_simulation.gif') }}" alt="Mô phỏng chứng khoán" style="width: 100%; height: auto; display: block; border-radius: 16px;">
+            </div>
+        </div>
+
+        <footer class="footer">
+            Bài Thi Giữa Kỳ Môn Python nâng cao © 2026 | Thực hiện bởi Phan Tất Bảo Khiêm
+        </footer>
+    </div>
+</body>
+</html>
