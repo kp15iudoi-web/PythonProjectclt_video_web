@@ -4,33 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hệ Thống Giao Dịch</title>
-    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(180deg, #0b1120 0%, #030712 100%);
+            color: #f8fafc;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            backdrop-filter: blur(16px);
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
-<body>
-    <div class="main-container">
-        <!-- Logo -->
-        <div class="logo-icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                <path d="M2 17l10 5 10-5"></path>
-                <path d="M2 12l10 5 10-5"></path>
-            </svg>
-        </div>
+<body class="flex flex-col justify-between items-center px-4 py-10">
 
-        <h1 class="main-title">Hệ Thống Giao Dịch</h1>
-        <p class="subtitle">Hệ thống mô phỏng và trực quan hóa luồng dữ liệu chứng khoán</p>
-
-        <!-- Khung hiển thị GIF mô phỏng -->
-        <div class="card-box">
-            <h2 class="card-title">Phân tích giao dịch trực quan</h2>
-            <div class="video-wrapper">
-                <img src="{{ url_for('static', path='/video/clt_simulation.gif') }}" alt="Mô phỏng chứng khoán" style="width: 100%; height: auto; display: block; border-radius: 16px;">
+    <!-- Header Section -->
+    <div class="text-center mt-4 max-w-xl">
+        <!-- Logo Icon -->
+        <div class="flex justify-center mb-5">
+            <div class="text-sky-400 text-6xl drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]">
+                <i class="fa-solid fa-layer-group"></i>
             </div>
         </div>
 
-        <footer class="footer">
-            Bài Thi Giữa Kỳ Môn Python nâng cao © 2026 | Thực hiện bởi Phan Tất Bảo Khiêm
-        </footer>
+        <!-- Main Title -->
+        <h1 class="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 mb-3 tracking-wide">
+            Hệ Thống Giao Dịch
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-slate-400 text-base md:text-lg font-normal">
+            Hệ thống mô phỏng và trực quan hóa luồng dữ liệu chứng khoán
+        </p>
     </div>
+
+    <!-- Main Content Card -->
+    <div class="glass-card w-full max-w-2xl p-6 md:p-8 my-8 text-center">
+        <h2 class="text-xl md:text-2xl font-semibold text-slate-100 mb-6 tracking-wide">
+            Phân tích giao dịch trực quan
+        </h2>
+
+        <!-- Video / GIF Display Container -->
+        <div class="relative overflow-hidden rounded-2xl bg-black/80 border border-slate-700/60 flex justify-center items-center shadow-inner">
+            <img src="/static/video/clt_simulation.gif" alt="Phân tích giao dịch" class="w-full h-auto rounded-2xl max-h-[480px] object-contain">
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="text-center text-slate-500 text-sm md:text-base mb-2">
+        Bài Thi Giữa Kỳ Môn Python nâng cao © 2026 | Thực hiện bởi <span class="text-slate-300 font-medium">Phan Tất Bảo Khiêm</span>
+    </footer>
+
 </body>
 </html>
